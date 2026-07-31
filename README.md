@@ -24,8 +24,3 @@ chatbot answers questions about it using a heritage knowledge base.
 ├── heritage_data/                 # Heritage site JSON knowledge documents
 └── uk_heritage_architecture/      # Architectural style image dataset used for training
 ```
-
-
-- All processing runs locally via Ollama — no images or chat data sent to third-party APIs.
-- RAG prompt restricts answers to retrieved context to reduce hallucination.
-- Large files (model weights, image dataset) may need Git LFS if pushing to GitHub.
