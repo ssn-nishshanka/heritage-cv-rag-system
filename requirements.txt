@@ -1,0 +1,17 @@
+tensorflow==2.21.0
+keras==3.12.3
+numpy
+pandas
+matplotlib
+scikit-learn
+Pillow
+streamlit
+requests
+langchain
+langchain-community
+langchain-ollama
+faiss-cpu
+sentence-transformers
+pypdf
+jupyter
+ipykernel
