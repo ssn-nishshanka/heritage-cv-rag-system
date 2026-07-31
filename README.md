@@ -72,9 +72,3 @@ heritage-cv-rag-system/
 ├── heritage_data/                 # Heritage knowledge base (JSON documents)
 └── uk_heritage_architecture/      # Image dataset used for training
 ```
-
-
-
----
-
-## A
