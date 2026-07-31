@@ -1,26 +1,80 @@
 # Heritage CV + RAG System
 
-An AI prototype for the National Heritage Preservation Trust (NHPT). A visitor uploads a photo
-of a building, a computer vision model classifies its architectural style, and a LangChain RAG
-chatbot answers questions about it using a heritage knowledge base.
+An AI-powered heritage assistant developed as a prototype for the **National Heritage Preservation Trust (NHPT)**. The system combines **Computer Vision (CV)** and **Retrieval-Augmented Generation (RAG)** to identify the architectural style of a heritage building from an uploaded image and answer visitor questions using a heritage knowledge base.
 
-## How it works
-1. **CV model** — EfficientNetB0 (transfer learning) classifies images into 6 UK architectural
-   styles: Gothic, Georgian, Tudor Revival, Edwardian, Romanesque, Queen Anne.
-2. **RAG pipeline** — LangChain + FAISS vector store + Ollama LLM (`gemma3:12b`) retrieve and
-   answer from a heritage document knowledge base, with conversation memory for follow-up
-   questions.
-3. **Handoff** — the CV prediction is passed into the RAG prompt so answers are aware of the
-   detected style.
-4. **App** — a Streamlit-based chat interface (app.py) integrates all system components.
+---
 
-## Project structure
-```
-├── README.md                      # Project overview
+## Features
+
+- **Architectural Style Classification**
+  - Uses **EfficientNetB0** with transfer learning to classify images into six UK architectural styles.
+  - Supported styles:
+    - Gothic
+    - Georgian
+    - Tudor Revival
+    - Edwardian
+    - Romanesque
+    - Queen Anne
+
+- **Retrieval-Augmented Generation (RAG)**
+  - Built using **LangChain**, **FAISS**, and **Ollama (Gemma)**.
+  - Retrieves relevant information from a heritage knowledge base before generating responses.
+  - Supports conversational memory for follow-up questions.
+
+- **Integrated AI Pipeline**
+  - The predicted architectural style from the CV model is automatically passed to the RAG system, allowing responses to be tailored to the detected style.
+
+- **Interactive Web Application**
+  - A **Streamlit** interface allows users to:
+    - Upload an image of a heritage building
+    - View the predicted architectural style
+    - Ask questions about the building
+    - Continue the conversation with contextual memory
+
+---
+
+## System Workflow
+
+1. User uploads an image of a heritage building.
+2. The EfficientNetB0 model predicts its architectural style.
+3. The predicted style is provided as context to the RAG pipeline.
+4. LangChain retrieves relevant information from the FAISS vector database.
+5. The Ollama LLM generates a contextual response.
+6. The Streamlit application displays both the prediction and the chatbot response.
+
+---
+
+## Technologies Used
+
+- Python
+- TensorFlow / Keras
+- EfficientNetB0
+- LangChain
+- FAISS
+- Ollama (Gemma 3:12B)
+- Streamlit
+- NumPy
+- Pandas
+
+---
+
+## Project Structure
+
+```text
+heritage-cv-rag-system/
+│
+├── README.md                      # Project documentation
+├── requirements.txt               # Python dependencies
 ├── .gitignore                     # Git ignore rules
-├── heritage_cv_rag_system.ipynb   # CV model training/evaluation + RAG
-├── app.py                         # Streamlit chat application
-├── heritage_faiss_index/          # FAISS vector database for RAG
-├── heritage_data/                 # Heritage site JSON knowledge documents
-└── uk_heritage_architecture/      # Architectural style image dataset used for training
+├── heritage_cv_rag_system.ipynb   # CV model training, evaluation, and RAG development
+├── app.py                         # Streamlit web application
+├── heritage_faiss_index/          # FAISS vector database
+├── heritage_data/                 # Heritage knowledge base (JSON documents)
+└── uk_heritage_architecture/      # Image dataset used for training
 ```
+
+
+
+---
+
+## A
