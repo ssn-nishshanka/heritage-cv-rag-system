@@ -2,6 +2,9 @@
 
 An AI-powered heritage assistant developed as a prototype for the **National Heritage Preservation Trust (NHPT)**. The system combines **Computer Vision (CV)** and **Retrieval-Augmented Generation (RAG)** to identify the architectural style of a heritage building from an uploaded image and answer visitor questions using a heritage knowledge base.
 
+<img width="946" height="1015" alt="image" src="https://github.com/user-attachments/assets/169e36ec-914f-416c-8b47-53c70c7ba9f8" />
+
+
 ---
 
 ## Features
